@@ -15,6 +15,10 @@ Dependency orders are important and wralk-dep.js reticulum.js and wralk.js respe
 
 ` uglifyjs .\wralk-dep.js .\reticulum.js .\app\public\vendors\wralk\wralk.js  -o .\wralk.js -c -m `
 ``` 
+  <body>
+    <div id="wralk-scene" data-project="demo" data-baseurl="/p/"></div>
+  </body>
+
   <script src="all.js"></script> 
   <script src="wralk.js"></script> 
   <script>
@@ -25,6 +29,10 @@ Dependency orders are important and wralk-dep.js reticulum.js and wralk.js respe
 OR
 
 ``` 
+  <body>
+    <div id="wralk-scene" data-project="demo" data-baseurl="/p/"></div>
+  </body>
+
   <script src="all.js"></script> 
   <script src="wralk-dep.js"></script> 
   <script src="reticulum.js"></script> 
@@ -35,7 +43,39 @@ OR
  ```
  for development
 
+`id` must be "wralk-scene"
+
+`data-project` is your project name
+
+`data-baseurl` is your public directory that contains all scene stuffs
+
+### Project Directory Tree
+
+- p `"data-baseurl"` `<folder>` -> public folder
+  - demo `"data-project"` `<folder>` -> project name
+      - wralk.json
+      - cover.jpg -> loading screen
+      - bg `<folder>`
+          - back.jpg -> environment map (optional)
+      - m `<folder>` -> models
+        - floor
+        - floor.drc
+        - floor.obj
+        - floor.fbx
+        - ...
+      - t `<folder>` -> textures
+        - floor_texture.jpg
+        - floor_texture.png
+        - floor_texture.ktx
+  - demo1
+  ....
+  - demo2
+
 ## Dependencies
+
+wralk.json
+
+ - Custom Scene 
 
 all.js
  - jQuery v3.3.1 
@@ -163,3 +203,9 @@ If you are baking a lightmap, you won't need to add a light into scene.
   }]
 }
 ```
+
+## LICENSES
+
+MIT and Apache License 2.0
+
+https://github.com/azmicirit/wralk/blob/master/licenses.txt
