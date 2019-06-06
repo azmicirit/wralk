@@ -7,6 +7,34 @@ http://wralk.azmicirit.com/demo
 
 http://wralk.azmicirit.com/villavr
 
+## Install
+
+### Minify All Javascripts
+
+Dependency orders are important and wralk-dep.js reticulum.js and wralk.js respectively.
+
+` uglifyjs .\wralk-dep.js .\reticulum.js .\app\public\vendors\wralk\wralk.js  -o .\wralk.js -c -m `
+``` 
+  <script src="all.js"></script> 
+  <script src="wralk.js"></script> 
+  <script>
+    var wralk_loader = new WRALK_LOADER(); 
+  </script>
+ ```
+
+OR
+
+``` 
+  <script src="all.js"></script> 
+  <script src="wralk-dep.js"></script> 
+  <script src="reticulum.js"></script> 
+  <script src="wralk.js"></script> 
+  <script>
+    var wralk_loader = new WRALK_LOADER(); 
+  </script>
+ ```
+ for development
+
 ## Dependencies
 
 all.js
@@ -135,9 +163,3 @@ If you are baking a lightmap, you won't need to add a light into scene.
   }]
 }
 ```
-
-## Minify All Javascripts
-
-Dependency orders are important and wralk-dep.js reticulum.js and wralk.js respectively.
-
-` uglifyjs .\wralk-dep.js .\reticulum.js .\app\public\vendors\wralk\wralk.js  -o .\wralk.js -c -m `
