@@ -3,9 +3,9 @@ Helper class for three.js controller, loader and scene. It helps to create whole
 
 ## Demos
 
-http://wralk.azmicirit.com/demo
+[http://wralk.azmicirit.com/demo](http://wralk.azmicirit.com/demo)
 
-http://wralk.azmicirit.com/villavr
+[http://wralk.azmicirit.com/villavr](http://wralk.azmicirit.com/villavr)
 
 ## Install
 
